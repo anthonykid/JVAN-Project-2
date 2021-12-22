@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TryLogin</string>
+    <string name="sign_in">Sign In</string>
+    <string name="Username">Username</string>
+    <string name="example_gma">example@gmail.com</string>
+    <string name="password">Password</string>
+
+    <string name="Config_your_IP_here">172.30.80.1</string>
+
+
+</resources>

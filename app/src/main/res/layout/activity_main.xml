@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg">
+
+
+    <!-- Button  -->
+    <TextView
+        android:id="@+id/btn_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="453dp"
+        android:background="@drawable/rectangle_6"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="Sign in"
+        android:textAppearance="@style/sign_in_btn"
+        style="@style/layoutSetting"/>
+
+    <LinearLayout
+        android:layout_below="@id/btn_sign_in"
+        android:layout_alignParentTop="false"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        style="@style/layoutSetting"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account?   "
+            android:textAppearance="@style/e_mail"/>
+
+        <TextView
+            android:id="@+id/sign_up_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up here!"
+            android:clickable="true"
+            android:textColor="#A27E32"
+            android:textAppearance="@style/e_mail"/>
+
+    </LinearLayout>
+
+    <!-- Password -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        style="@style/layoutSetting"
+        android:layout_marginTop="274dp"
+        android:gravity="top">
+
+        <TextView
+            android:id="@+id/ketpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:text="@string/password"
+            android:textAppearance="@style/e_mail" />
+
+        <EditText
+            android:id="@+id/etpassword"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/ketpass"
+            android:background="@drawable/rectangle_5"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:textAppearance="@style/example_gma" />
+
+    </RelativeLayout>
+
+    <!-- Email -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:layout_marginTop="168dp"
+        style="@style/layoutSetting"
+        android:gravity="top">
+
+        <TextView
+            android:id="@+id/e_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:text="@string/Username"
+            android:textAppearance="@style/e_mail" />
+
+        <EditText
+            android:id="@+id/etusername"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/rectangle_5"
+            android:hint="@string/Username"
+            android:paddingLeft="20dp"
+            android:textAppearance="@style/example_gma" />
+
+    </RelativeLayout>
+
+    <!-- Sign In -->
+    <TextView
+        android:id="@+id/sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="top"
+        android:text="@string/sign_in"
+        android:textAppearance="@style/sign_in" />
+    <!--
+      Font family: Montserrat
+      Line height: 32sp
+      (identical to box height)
+    -->
+</RelativeLayout>

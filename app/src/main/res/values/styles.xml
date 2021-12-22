@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="sign_in">
+        <item name="android:textSize">
+            32sp
+        </item>
+        <item name="android:textColor">
+            #3E4958
+        </item>
+    </style>
+
+    <style name="sign_in_btn">
+        <item name="android:textSize">
+            24sp
+        </item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">#FDFEFF</item>
+    </style>
+
+
+    <style name="please_fill">
+        <item name="android:textSize">
+            13sp
+        </item>
+        <item name="android:textColor">
+            #3E4958
+        </item>
+    </style>
+
+    <style name="e_mail">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">#3E4958</item>
+    </style>
+
+    <style name="example_gma">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">#D5DDE0</item>
+    </style>
+
+    <style name="layoutSetting">
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginLeft">36dp</item>
+        <item name="android:layout_marginRight">36dp</item>
+    </style>
+
+</resources>

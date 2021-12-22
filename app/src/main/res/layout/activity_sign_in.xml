@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".SignIn"
+    android:background="@drawable/bg">
+
+
+    <!-- Button  -->
+    <TextView
+        android:id="@+id/btn_sign_up"
+        style="@style/layoutSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passField"
+        android:layout_alignParentTop="false"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rectangle_6"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="Sign Up"
+        android:textAppearance="@style/sign_in_btn" />
+
+    <LinearLayout
+        android:id="@+id/pindahHalaman"
+        style="@style/layoutSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_sign_up"
+        android:layout_alignParentTop="false"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account?   "
+            android:textAppearance="@style/e_mail" />
+
+        <TextView
+            android:id="@+id/sign_in_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="Sign In here!"
+            android:textAppearance="@style/e_mail"
+            android:textColor="#A27E32" />
+
+    </LinearLayout>
+
+    <!-- name -->
+    <RelativeLayout
+        android:id="@+id/nameField"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        style="@style/layoutSetting"
+        android:layout_marginTop="274dp"
+        android:gravity="top">
+
+        <TextView
+            android:id="@+id/ketname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:text="Name"
+            android:textAppearance="@style/e_mail" />
+
+        <EditText
+            android:id="@+id/etnameup"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/ketname"
+            android:background="@drawable/rectangle_5"
+            android:hint="Your Name"
+            android:paddingLeft="20dp"
+            android:textAppearance="@style/example_gma" />
+
+    </RelativeLayout>
+
+    <!-- Password -->
+    <RelativeLayout
+        android:id="@+id/passField"
+        android:layout_below="@id/nameField"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="false"
+        style="@style/layoutSetting"
+        android:gravity="top">
+
+        <TextView
+            android:id="@+id/ketpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:text="@string/password"
+            android:textAppearance="@style/e_mail" />
+
+        <EditText
+            android:id="@+id/etpasswordup"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/ketpass"
+            android:background="@drawable/rectangle_5"
+            android:hint="@string/password"
+            android:paddingLeft="20dp"
+            android:textAppearance="@style/example_gma" />
+
+    </RelativeLayout>
+
+    <!-- Email -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:layout_marginTop="168dp"
+        style="@style/layoutSetting"
+        android:gravity="top">
+
+        <TextView
+            android:id="@+id/e_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:text="@string/Username"
+            android:textAppearance="@style/e_mail" />
+
+        <EditText
+            android:id="@+id/etusernameup"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/rectangle_5"
+            android:hint="@string/Username"
+            android:paddingLeft="20dp"
+            android:textAppearance="@style/example_gma" />
+
+    </RelativeLayout>
+
+    <!-- Sign Up -->
+    <LinearLayout
+        android:id="@+id/sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="25dp"
+        android:gravity="top">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up "
+            android:fontFamily="@font/montserrat_bold"
+            android:textAppearance="@style/sign_in"/>
+
+        <TextView
+            android:id="@+id/staff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Staff"
+            android:fontFamily="@font/montserrat_bold"
+            android:textAppearance="@style/sign_in"/>
+    </LinearLayout>
+    <!--
+      Font family: Montserrat
+      Line height: 32sp
+      (identical to box height)
+    -->
+</RelativeLayout>
