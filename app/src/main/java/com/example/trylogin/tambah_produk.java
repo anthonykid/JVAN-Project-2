@@ -153,6 +153,7 @@ public class tambah_produk extends AppCompatActivity {
     }
 
     private void tmbhproduk(){
+
         ApiInterface arddata = ApiClient.getClient().create(ApiInterface.class);
         Call<ResponProduk> smpdata = arddata.tmbproduk(nama,harga,kate,ket,picture);
 

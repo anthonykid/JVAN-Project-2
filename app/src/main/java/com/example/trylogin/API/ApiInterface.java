@@ -48,7 +48,7 @@ public interface ApiInterface {
 
 
     @FormUrlEncoded
-    @POST("tambah_produk.php")
+    @POST("tpkat.php")
     Call<ResponProduk> tmbproduk(
             @Field("nama_produk") String nama_produk,
             @Field("harga") String harga,
