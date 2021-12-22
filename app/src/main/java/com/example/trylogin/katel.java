@@ -1,35 +1,32 @@
+
 package com.example.trylogin;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+        import androidx.appcompat.app.AppCompatActivity;
+        import androidx.recyclerview.widget.LinearLayoutManager;
+        import androidx.recyclerview.widget.RecyclerView;
+        import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ProgressBar;
-import android.widget.Toast;
+        import android.os.Bundle;
+        import android.view.View;
+        import android.widget.ProgressBar;
+        import android.widget.Toast;
 
-import com.example.trylogin.API.ApiClient;
-import com.example.trylogin.API.ApiInterface;
-import com.example.trylogin.Adapter.AdapterProduk;
-import com.example.trylogin.Model.Produk.DataProduk;
-import com.example.trylogin.Model.Produk.ResponProduk;
-import com.example.trylogin.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+        import com.example.trylogin.API.ApiClient;
+        import com.example.trylogin.API.ApiInterface;
+        import com.example.trylogin.Adapter.AdapterProduk2;
+        import com.example.trylogin.Model.Produk.DataProduk;
+        import com.example.trylogin.Model.Produk.ResponProduk;
 
-import java.util.ArrayList;
-import java.util.List;
+        import java.util.ArrayList;
+        import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+        import retrofit2.Call;
+        import retrofit2.Callback;
+        import retrofit2.Response;
 
-public class StaffMenu extends AppCompatActivity {
+public class katel extends AppCompatActivity {
 
 
-    private FloatingActionButton but_add;
 
 
 
@@ -42,19 +39,14 @@ public class StaffMenu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_staff_menu);
-        but_add = findViewById(R.id.add_produk);
+        setContentView(R.layout.perkat);
+
         rfdata = findViewById(R.id.swprf);
         pbdata = findViewById(R.id.pbd);
         tampildata = findViewById(R.id.data_produk);
         lmdata = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false);
         tampildata.setLayoutManager(lmdata);
-        but_add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(StaffMenu.this, tambah_produk.class));
-            }
-        });
+
 
 
 
@@ -84,7 +76,7 @@ public class StaffMenu extends AppCompatActivity {
         pbdata.setVisibility(View.VISIBLE);
 
         ApiInterface arddata = ApiClient.getClient().create(ApiInterface.class);
-        Call<ResponProduk> tdata = arddata.tampilp();
+        Call<ResponProduk> tdata = arddata.katel();
 
         tdata.enqueue(new Callback<ResponProduk>() {
             @Override
@@ -93,7 +85,7 @@ public class StaffMenu extends AppCompatActivity {
                 String msg = response.body().getMsg();
 
                 listp = response.body().getData_produk();
-                adp = new AdapterProduk(StaffMenu.this, listp);
+                adp = new AdapterProduk2(katel.this, listp);
                 tampildata.setAdapter(adp);
 
                 pbdata.setVisibility(View.INVISIBLE);
@@ -101,7 +93,7 @@ public class StaffMenu extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ResponProduk> call, Throwable t) {
-                Toast.makeText(StaffMenu.this, "GAGAL KONEK"+t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(katel.this, "GAGAL KONEK"+t.getMessage(), Toast.LENGTH_SHORT).show();
 
                 pbdata.setVisibility(View.INVISIBLE);
             }
