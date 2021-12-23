@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TryLogin">
         <activity
+            android:name=".DetailProducts"
+            android:exported="false" />
+        <activity
             android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
@@ -57,6 +60,7 @@
         <activity
             android:name=".katln"
             android:exported="false" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

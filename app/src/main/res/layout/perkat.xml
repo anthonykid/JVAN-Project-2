@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".katel">
+    tools:context=".katel"
+    android:background="@drawable/bg">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swprf"
@@ -16,9 +17,7 @@
             android:id="@+id/data_produk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:listitem="@layout/view_produk"
-
-            />
+            tools:listitem="@layout/view_produk"/>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <ProgressBar

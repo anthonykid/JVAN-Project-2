@@ -2,15 +2,18 @@ package com.example.trylogin;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Base64;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
@@ -37,7 +40,7 @@ public class tambah_produk extends AppCompatActivity {
     private String nama,kate,ket,harga,picture;
     private EditText nmpd,hrg,keterangan;
     private CircleImageView mPicture;
-    private Button bttsp;
+    private TextView bttsp;
     private FloatingActionButton mFabChoosePic;
 
     private Bitmap bitmap;
@@ -55,6 +58,8 @@ public class tambah_produk extends AppCompatActivity {
         bttsp = findViewById(R.id.btsimpan);
         mPicture = findViewById(R.id.picture);
         mFabChoosePic = findViewById(R.id.fabChoosePic);
+
+        buttonEffect(bttsp);
 
 
         mFabChoosePic.setOnClickListener(new View.OnClickListener() {
@@ -148,6 +153,7 @@ public class tambah_produk extends AppCompatActivity {
 
     public void setupSpinner() {
         ketspiner = findViewById(R.id.spkat);
+        ketspiner.setScrollBarStyle(2);
             String[] items = new String[]{"Elektronik", "Fashion", "Books", "Sport","Traveling","Lainlain"};
         //create an adapter to describe how the items are displayed, adapters are used in several places in android.
         //There are multiple variations of this, but this is the basic variant.
@@ -174,15 +180,35 @@ public class tambah_produk extends AppCompatActivity {
             @Override
             public void onResponse(Call<ResponProduk> call, Response<ResponProduk> response) {
                 int id_produk = response.body().getId_produk();
-                String msg = response.body().getMsg();
 
-                Toast.makeText(tambah_produk.this, "Alert : "+msg, Toast.LENGTH_SHORT).show();
+                Toast.makeText(tambah_produk.this, "Tambah Produk Berhasil!", Toast.LENGTH_SHORT).show();
                 finish();
             }
 
             @Override
             public void onFailure(Call<ResponProduk> call, Throwable t) {
                 Toast.makeText(tambah_produk.this, "GAGAL MENGHUBUNGI SERVER"+t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    public static void buttonEffect(View button) {
+        button.setOnTouchListener(new View.OnTouchListener() {
+
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        v.getBackground().setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        v.invalidate();
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        v.getBackground().clearColorFilter();
+                        v.invalidate();
+                        break;
+                    }
+                }
+                return false;
             }
         });
     }

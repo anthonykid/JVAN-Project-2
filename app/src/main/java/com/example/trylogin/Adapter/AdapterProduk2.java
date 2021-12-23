@@ -2,6 +2,7 @@ package com.example.trylogin.Adapter;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,10 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.trylogin.API.ApiClient;
 import com.example.trylogin.API.ApiInterface;
+import com.example.trylogin.DetailProducts;
+import com.example.trylogin.MainActivity;
+import com.example.trylogin.MainMenu;
+import com.example.trylogin.MenuAdmin;
 import com.example.trylogin.Model.Produk.DataProduk;
 import com.example.trylogin.Model.Produk.ResponProduk;
 import com.example.trylogin.R;
@@ -35,6 +40,11 @@ public class AdapterProduk2 extends RecyclerView.Adapter<AdapterProduk2.HolderDa
     private Context ctx;
     private List <DataProduk> list_produk;
     private int idproduk;
+    String idLempar;
+    private String imgurl;
+    private String keterangan;
+    private String namaproduk;
+    private String hargaproduk;
     public AdapterProduk2(Context ctx, List<DataProduk> list_produk) {
         this.ctx = ctx;
         this.list_produk = list_produk;
@@ -59,8 +69,8 @@ public class AdapterProduk2 extends RecyclerView.Adapter<AdapterProduk2.HolderDa
 
         holder.id_produk.setText(String.valueOf(dm.getId_produk()));
         holder.nama_produk.setText(dm.getNama_produk());
-        holder.kategori.setText(dm.getKategori());
-        holder.ket.setText(dm.getKet());
+        holder.kategori.setText(dm.getKet());
+        holder.ket.setText(dm.getPicture());
 
         RequestOptions requestOptions = new RequestOptions();
         requestOptions.skipMemoryCache(true);
@@ -93,46 +103,23 @@ public class AdapterProduk2 extends RecyclerView.Adapter<AdapterProduk2.HolderDa
             ket = itemView.findViewById(R.id.kett);
             mPicture = itemView.findViewById(R.id.picture);
 
-            itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public boolean onLongClick(View view) {
-                    AlertDialog.Builder msgg = new AlertDialog.Builder(ctx);
-                    msgg.setMessage("PILIH OPSI");
-                    msgg.setCancelable(true);
+                public void onClick(View view) {
+                    idproduk = Integer.valueOf(id_produk.getText().toString());
+                    idLempar = String.valueOf(idproduk);
+                    namaproduk = nama_produk.getText().toString();
+                    hargaproduk = harga.getText().toString();
+                    keterangan = kategori.getText().toString();
+                    imgurl = ket.getText().toString();
 
-                    idproduk = Integer.parseInt(id_produk.getText().toString());
-
-                    msgg.setPositiveButton("BELI", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-
-                        }
-                    });
-
-
-                    msgg.show();
-                    return false;
-                }
-            });
-        }
-
-        private void delproduk(){
-            ApiInterface arddata = ApiClient.getClient().create(ApiInterface.class);
-            Call<ResponProduk> deldt = arddata.hpsproduk(idproduk);
-
-
-            deldt.enqueue(new Callback<ResponProduk>() {
-                @Override
-                public void onResponse(Call<ResponProduk> call, Response<ResponProduk> response) {
-                    int id_produk = response.body().getId_produk();
-                    String msg = response.body().getMsg();
-
-                    Toast.makeText(ctx, ""+msg, Toast.LENGTH_SHORT).show();
-                }
-
-                @Override
-                public void onFailure(Call<ResponProduk> call, Throwable t) {
-                    Toast.makeText(ctx, "GAGAL MENGHUBUNGI SERVER"+t.getMessage(), Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(ctx, DetailProducts.class);
+                    intent.putExtra("id",idLempar);
+                    intent.putExtra("nama",namaproduk);
+                    intent.putExtra("harga",hargaproduk);
+                    intent.putExtra("keterangan",keterangan);
+                    intent.putExtra("imgurl",imgurl);
+                    ctx.startActivity(intent);
                 }
             });
         }
