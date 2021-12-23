@@ -32,6 +32,12 @@
                 android:text="id_produk"
                 android:visibility="gone" />
             <TextView
+                android:id="@+id/stockk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STOCK"
+                android:visibility="gone" />
+            <TextView
                 android:id="@+id/kett"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
