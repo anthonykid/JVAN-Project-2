@@ -28,10 +28,11 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_below="@id/keterangan"
         android:id="@+id/container1"
+        style="@style/layoutSetting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/keterangan"
         android:layout_alignParentTop="false"
         android:layout_marginTop="30dp"
         style="@style/layoutSetting"
@@ -39,28 +40,28 @@
 
         <LinearLayout
             android:id="@+id/fashion_act"
-            android:layout_weight="1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@drawable/menuadmin"
             android:clickable="true"
             android:orientation="vertical">
 
             <ImageView
-                android:layout_marginTop="10dp"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:src="@drawable/clothes"/>
+                android:layout_marginTop="10dp"
+                android:src="@drawable/clothes" />
 
             <TextView
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="Fashion"
-                android:layout_gravity="center"
                 android:textAppearance="@style/sign_in"
                 android:textSize="22sp" />
         </LinearLayout>
@@ -71,28 +72,28 @@
 
         <LinearLayout
             android:id="@+id/electronic_act"
-            android:layout_weight="1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@drawable/menuadmin2"
             android:clickable="true"
             android:orientation="vertical">
 
             <ImageView
-                android:layout_marginTop="10dp"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:src="@drawable/electronics"/>
+                android:layout_marginTop="10dp"
+                android:src="@drawable/electronics" />
 
             <TextView
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:text="Electronic"
-                android:layout_gravity="center"
                 android:textAppearance="@style/sign_in"
                 android:textSize="22sp" />
 
