@@ -65,26 +65,52 @@
             android:textStyle="bold"
             android:layout_marginBottom="10dp"/>
 
-        <TextView
-            android:id="@+id/stockDetail"
+
+
+        <LinearLayout
+            android:layout_below="@id/detprod"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/detprod"
-            android:layout_marginBottom="10dp"
-            android:hint="Stock"
-            android:paddingLeft="20dp"
-            android:textAppearance="@style/e_mail" />
+            android:orientation="horizontal"
+            android:id="@+id/containerStock">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Stock :  "
+                android:paddingLeft="20dp"
+                android:fontFamily="@font/montserrat"
+                android:textAppearance="@style/e_mail" />
+
+            <TextView
+                android:id="@+id/stockDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Stock"
+                android:fontFamily="@font/montserrat"
+                android:textAppearance="@style/e_mail" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@id/containerStock"
+            android:background="@drawable/detail4" />
 
         <TextView
             android:id="@+id/ketDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/stockDetail"
-            android:layout_marginBottom="16dp"
+            android:layout_below="@id/containerStock"
+            android:layout_marginTop="5dp"
             android:fontFamily="@font/montserrat"
-            android:hint="Keterangan"
+            android:text="Keterangan"
             android:paddingLeft="20dp"
-            android:paddingTop="3dp"
             android:textAppearance="@style/e_mail" />
 
         <TextView

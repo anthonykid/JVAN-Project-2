@@ -92,7 +92,7 @@ public class AdapterProduk extends RecyclerView.Adapter<AdapterProduk.HolderData
             harga = itemView.findViewById(R.id.hrg);
             kategori = itemView.findViewById(R.id.kat);
             ket = itemView.findViewById(R.id.kett);
-            stkk = itemView.findViewById(R.id.stock);
+            stkk = itemView.findViewById(R.id.stock_pd);
             mPicture = itemView.findViewById(R.id.picture);
 
             itemView.setOnLongClickListener(new View.OnLongClickListener() {

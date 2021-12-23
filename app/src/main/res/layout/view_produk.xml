@@ -58,6 +58,12 @@
                 android:text="Kategori"
                 android:textSize="17sp"
                 android:textStyle="italic"/>
+            <TextView
+                android:id="@+id/stock_pd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="id_produk"
+                android:visibility="gone" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
