@@ -26,8 +26,9 @@ public class DetailProducts extends AppCompatActivity implements View.OnClickLis
     private String keterangan;
     private String namaproduk;
     private String hargaproduk;
+    private String stkkk;
     ImageView PictureDetail;
-    TextView btnBuy, namaDetail, ketDetail, hargaDetail, imgDetail;
+    TextView btnBuy, namaDetail, ketDetail, hargaDetail, stokdt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,16 +43,19 @@ public class DetailProducts extends AppCompatActivity implements View.OnClickLis
         namaproduk = intent.getStringExtra("nama");
         keterangan = intent.getStringExtra("keterangan");
         hargaproduk = intent.getStringExtra("harga");
+        stkkk = intent.getStringExtra("stock");
         imgurl = intent.getStringExtra("imgurl");
 
         namaDetail = findViewById(R.id.namaDetail);
         ketDetail = findViewById(R.id.ketDetail);
         hargaDetail = findViewById(R.id.hargaDetail);
         PictureDetail = findViewById(R.id.pictureDetail);
+        stokdt = findViewById(R.id.stockDetail);
         btnBuy = findViewById(R.id.btnBuy);
 
         namaDetail.setText(namaproduk);
         ketDetail.setText(keterangan);
+        stokdt.setText(stkkk);
         hargaDetail.setText(hargaproduk);
 
         RequestOptions requestOptions = new RequestOptions();

@@ -2,7 +2,7 @@ package com.example.trylogin.Model.Produk;
 
 public class DataProduk {
 
-    int id_produk,harga;
+    int id_produk,harga,stok;
     String nama_produk,kategori,ket,picture;
 
 
@@ -52,5 +52,13 @@ public class DataProduk {
 
     public void setPicture(String picture) {
         this.picture = picture;
+    }
+
+    public int getStok() {
+        return stok;
+    }
+
+    public void setStok(int stok) {
+        this.stok = stok;
     }
 }

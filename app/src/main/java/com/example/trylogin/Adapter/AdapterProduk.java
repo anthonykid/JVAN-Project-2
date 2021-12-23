@@ -61,6 +61,7 @@ public class AdapterProduk extends RecyclerView.Adapter<AdapterProduk.HolderData
         holder.nama_produk.setText(dm.getNama_produk());
         holder.kategori.setText(dm.getKategori());
         holder.ket.setText(dm.getKet());
+        holder.stkk.setText(String.valueOf(dm.getStok()));
 
         RequestOptions requestOptions = new RequestOptions();
         requestOptions.skipMemoryCache(true);
@@ -81,7 +82,7 @@ public class AdapterProduk extends RecyclerView.Adapter<AdapterProduk.HolderData
     }
 
     public class HolderData extends RecyclerView.ViewHolder{
-        TextView id_produk,nama_produk,harga,kategori,ket;
+        TextView id_produk,nama_produk,harga,kategori,ket,stkk;
         private CircleImageView mPicture;
 
         public HolderData(@NonNull View itemView) {
@@ -91,6 +92,7 @@ public class AdapterProduk extends RecyclerView.Adapter<AdapterProduk.HolderData
             harga = itemView.findViewById(R.id.hrg);
             kategori = itemView.findViewById(R.id.kat);
             ket = itemView.findViewById(R.id.kett);
+            stkk = itemView.findViewById(R.id.stock);
             mPicture = itemView.findViewById(R.id.picture);
 
             itemView.setOnLongClickListener(new View.OnLongClickListener() {

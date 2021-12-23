@@ -45,6 +45,7 @@ public class AdapterProduk2 extends RecyclerView.Adapter<AdapterProduk2.HolderDa
     private String keterangan;
     private String namaproduk;
     private String hargaproduk;
+    private String stkkk;
     public AdapterProduk2(Context ctx, List<DataProduk> list_produk) {
         this.ctx = ctx;
         this.list_produk = list_produk;
@@ -71,6 +72,7 @@ public class AdapterProduk2 extends RecyclerView.Adapter<AdapterProduk2.HolderDa
         holder.nama_produk.setText(dm.getNama_produk());
         holder.kategori.setText(dm.getKet());
         holder.ket.setText(dm.getPicture());
+        holder.stkk.setText(dm.getStok());
 
         RequestOptions requestOptions = new RequestOptions();
         requestOptions.skipMemoryCache(true);
@@ -91,7 +93,7 @@ public class AdapterProduk2 extends RecyclerView.Adapter<AdapterProduk2.HolderDa
     }
 
     public class HolderData extends RecyclerView.ViewHolder{
-        TextView id_produk,nama_produk,harga,kategori,ket;
+        TextView id_produk,nama_produk,harga,kategori,ket,stkk;
         private CircleImageView mPicture;
 
         public HolderData(@NonNull View itemView) {
@@ -101,6 +103,7 @@ public class AdapterProduk2 extends RecyclerView.Adapter<AdapterProduk2.HolderDa
             harga = itemView.findViewById(R.id.hrg);
             kategori = itemView.findViewById(R.id.kat);
             ket = itemView.findViewById(R.id.kett);
+            stkk = itemView.findViewById(R.id.stock);
             mPicture = itemView.findViewById(R.id.picture);
 
             itemView.setOnClickListener(new View.OnClickListener() {
@@ -111,6 +114,7 @@ public class AdapterProduk2 extends RecyclerView.Adapter<AdapterProduk2.HolderDa
                     namaproduk = nama_produk.getText().toString();
                     hargaproduk = harga.getText().toString();
                     keterangan = kategori.getText().toString();
+                    stkkk = stkk.getText().toString();
                     imgurl = ket.getText().toString();
 
                     Intent intent = new Intent(ctx, DetailProducts.class);
@@ -118,6 +122,7 @@ public class AdapterProduk2 extends RecyclerView.Adapter<AdapterProduk2.HolderDa
                     intent.putExtra("nama",namaproduk);
                     intent.putExtra("harga",hargaproduk);
                     intent.putExtra("keterangan",keterangan);
+                    intent.putExtra("stock",stkkk);
                     intent.putExtra("imgurl",imgurl);
                     ctx.startActivity(intent);
                 }

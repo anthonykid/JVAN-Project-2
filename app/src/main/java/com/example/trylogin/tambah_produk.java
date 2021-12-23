@@ -37,8 +37,8 @@ import retrofit2.Response;
 public class tambah_produk extends AppCompatActivity {
     Spinner ketspiner;
 
-    private String nama,kate,ket,harga,picture;
-    private EditText nmpd,hrg,keterangan;
+    private String nama,kate,ket,harga,stk,picture;
+    private EditText nmpd,hrg,keterangan,stock;
     private CircleImageView mPicture;
     private TextView bttsp;
     private FloatingActionButton mFabChoosePic;
@@ -55,6 +55,7 @@ public class tambah_produk extends AppCompatActivity {
         nmpd = findViewById(R.id.nama_produk);
         hrg = findViewById(R.id.harga);
         keterangan = findViewById(R.id.ket);
+        stock = findViewById(R.id.stock);
         bttsp = findViewById(R.id.btsimpan);
         mPicture = findViewById(R.id.picture);
         mFabChoosePic = findViewById(R.id.fabChoosePic);
@@ -75,12 +76,12 @@ public class tambah_produk extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
-
                 nama = nmpd.getText().toString();
                 harga = hrg.getText().toString();
                 kate = ketspiner.getSelectedItem().toString();
                 ket = keterangan.getText().toString();
+                stk = stock.getText().toString();
+
                 picture = getStringImage(bitmap);
                 RequestOptions requestOptions = new RequestOptions();
                 Glide.with(tambah_produk.this)
@@ -153,7 +154,6 @@ public class tambah_produk extends AppCompatActivity {
 
     public void setupSpinner() {
         ketspiner = findViewById(R.id.spkat);
-        ketspiner.setScrollBarStyle(2);
             String[] items = new String[]{"Elektronik", "Fashion", "Books", "Sport","Traveling","Lainlain"};
         //create an adapter to describe how the items are displayed, adapters are used in several places in android.
         //There are multiple variations of this, but this is the basic variant.
@@ -165,7 +165,7 @@ public class tambah_produk extends AppCompatActivity {
     private void tmbhproduk(){
 
         ApiInterface arddata = ApiClient.getClient().create(ApiInterface.class);
-        Call<ResponProduk> smpdata = arddata.tmbproduk(nama,harga,kate,ket,picture);
+        Call<ResponProduk> smpdata = arddata.tmbproduk(nama,harga,kate,ket,stk,picture);
 
 
         String picture = null;

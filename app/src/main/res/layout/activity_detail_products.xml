@@ -66,27 +66,37 @@
             android:layout_marginBottom="10dp"/>
 
         <TextView
-            android:paddingTop="3dp"
-            android:layout_below="@id/detprod"
-            android:id="@+id/ketDetail"
+            android:id="@+id/stockDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="@font/montserrat"
-            android:hint="Keterangan"
+            android:layout_below="@id/detprod"
+            android:layout_marginBottom="10dp"
+            android:hint="Stock"
             android:paddingLeft="20dp"
             android:textAppearance="@style/e_mail" />
 
         <TextView
-            android:background="@drawable/detail3"
-            android:id="@+id/btnBuy"
-            android:layout_alignParentBottom="true"
+            android:id="@+id/ketDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/stockDetail"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/montserrat"
+            android:hint="Keterangan"
+            android:paddingLeft="20dp"
+            android:paddingTop="3dp"
+            android:textAppearance="@style/e_mail" />
+
+        <TextView
+            android:id="@+id/btnBuy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/detail3"
             android:gravity="center"
             android:text="Buy Now!"
-            android:textColor="@color/white"
-            android:textAppearance="@style/e_mail"/>
+            android:textAppearance="@style/e_mail"
+            android:textColor="@color/white" />
     </RelativeLayout>
 
 </LinearLayout>

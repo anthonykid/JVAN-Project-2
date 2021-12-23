@@ -54,6 +54,7 @@ public interface ApiInterface {
             @Field("harga") String harga,
             @Field("kategori") String kategori,
             @Field("ket") String keterangan,
+            @Field("stok") String stok,
             @Field("picture") String picture);
 
 
