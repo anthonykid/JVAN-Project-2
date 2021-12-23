@@ -1,5 +1,6 @@
 package com.example.trylogin;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -12,5 +13,8 @@ public class StaffMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staff_menu);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
     }
 }

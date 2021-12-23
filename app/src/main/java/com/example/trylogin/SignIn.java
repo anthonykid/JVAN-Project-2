@@ -1,5 +1,6 @@
 package com.example.trylogin;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -36,6 +37,9 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         staff = findViewById(R.id.staff);
         pindah = findViewById(R.id.pindahHalaman);

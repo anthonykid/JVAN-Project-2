@@ -11,6 +11,7 @@
     <!-- Button  -->
     <TextView
         android:id="@+id/btn_sign_in"
+        style="@style/layoutSetting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="453dp"
@@ -18,8 +19,7 @@
         android:clickable="true"
         android:gravity="center"
         android:text="Sign in"
-        android:textAppearance="@style/sign_in_btn"
-        style="@style/layoutSetting"/>
+        android:textAppearance="@style/sign_in_btn" />
 
     <LinearLayout
         android:layout_below="@id/btn_sign_in"

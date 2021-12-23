@@ -1,5 +1,6 @@
 package com.example.trylogin;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -17,6 +18,9 @@ public class MenuAdmin extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_admin);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         staff = findViewById(R.id.addStaff);
         stock = findViewById(R.id.addstock);
