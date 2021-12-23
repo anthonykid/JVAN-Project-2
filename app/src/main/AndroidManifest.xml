@@ -13,6 +13,9 @@
         android:theme="@style/Theme.TryLogin"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".DetailProducts"
+            android:exported="false" />
+        <activity
             android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
@@ -35,6 +38,27 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tambah_produk"
+            android:exported="false" />
+        <activity
+            android:name=".katel"
+            android:exported="false" />
+        <activity
+            android:name=".katfs"
+            android:exported="false" />
+        <activity
+            android:name=".katbk"
+            android:exported="false" />
+        <activity
+            android:name=".katsp"
+            android:exported="false" />
+        <activity
+            android:name=".kattv"
+            android:exported="false" />
+        <activity
+            android:name=".katln"
             android:exported="false" />
 
         <meta-data

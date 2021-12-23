@@ -3,10 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/01Pelajaran/Tambahan/Android-Clone-For_Practice/Project2Hacktiv8/JVAN-Project-2/app/src/main/res/font/montserrat_bold.xml" value="0.2212962962962963" />
-        <entry key="..\:/01Pelajaran/Tambahan/Android-Clone-For_Practice/Project2Hacktiv8/JVAN-Project-2/app/src/main/res/layout/activity_main.xml" value="0.17753623188405798" />
-        <entry key="..\:/01Pelajaran/Tambahan/Android-Clone-For_Practice/Project2Hacktiv8/JVAN-Project-2/app/src/main/res/layout/activity_main_menu.xml" value="0.17753623188405798" />
-        <entry key="..\:/01Pelajaran/Tambahan/Android-Clone-For_Practice/Project2Hacktiv8/JVAN-Project-2/app/src/main/res/layout/activity_splash_screen.xml" value="0.17753623188405798" />
+        <entry key="..\:/SMST 7/Praktek/JVAN-Project-2/app/src/main/res/drawable-v24/rectangle_6.xml" value="0.37864583333333335" />
+        <entry key="..\:/SMST 7/Praktek/JVAN-Project-2/app/src/main/res/drawable/bg.xml" value="0.37864583333333335" />
+        <entry key="..\:/SMST 7/Praktek/JVAN-Project-2/app/src/main/res/drawable/detail.xml" value="0.37864583333333335" />
+        <entry key="..\:/SMST 7/Praktek/JVAN-Project-2/app/src/main/res/drawable/detail2.xml" value="0.37864583333333335" />
+        <entry key="..\:/SMST 7/Praktek/JVAN-Project-2/app/src/main/res/drawable/detail3.xml" value="0.37864583333333335" />
+        <entry key="..\:/SMST 7/Praktek/JVAN-Project-2/app/src/main/res/drawable/detail4.xml" value="0.37864583333333335" />
+        <entry key="..\:/SMST 7/Praktek/JVAN-Project-2/app/src/main/res/drawable/menuadmin.xml" value="0.37864583333333335" />
+        <entry key="..\:/SMST 7/Praktek/JVAN-Project-2/app/src/main/res/drawable/menuadmin2.xml" value="0.37864583333333335" />
+        <entry key="..\:/SMST 7/Praktek/JVAN-Project-2/app/src/main/res/layout/activity_detail_products.xml" value="0.3625" />
+        <entry key="..\:/SMST 7/Praktek/JVAN-Project-2/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/SMST 7/Praktek/JVAN-Project-2/app/src/main/res/layout/activity_staff_menu.xml" value="0.3625" />
+        <entry key="..\:/SMST 7/Praktek/JVAN-Project-2/app/src/main/res/layout/activity_tambah_produk.xml" value="0.3625" />
+        <entry key="..\:/SMST 7/Praktek/JVAN-Project-2/app/src/main/res/layout/perkat.xml" value="0.3625" />
+        <entry key="..\:/SMST 7/Praktek/JVAN-Project-2/app/src/main/res/layout/view_produk.xml" value="0.3625" />
         <entry key="..\:/SMST 7/Praktek/TryLogin/app/src/main/res/drawable-v24/rectangle_6.xml" value="0.15462962962962962" />
         <entry key="..\:/SMST 7/Praktek/TryLogin/app/src/main/res/drawable/bg.xml" value="0.39692307692307693" />
         <entry key="..\:/SMST 7/Praktek/TryLogin/app/src/main/res/drawable/menuadmin.xml" value="0.3106837606837607" />

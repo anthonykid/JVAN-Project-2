@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/rectangle_5">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/picture"
+            android:layout_width="55dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_launcher_background" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/id_pd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="id_produk"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/kett"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="id_produk"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/nama_pd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Produk"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/hrg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga"
+                android:inputType="number"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/kat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kategori"
+                android:textSize="17sp"
+                android:textStyle="italic"/>
+            <TextView
+                android:id="@+id/stock_pd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="id_produk"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

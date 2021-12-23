@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StaffMenu"
+    tools:context=".katel"
     android:background="@drawable/bg">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -17,9 +17,7 @@
             android:id="@+id/data_produk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:listitem="@layout/view_produk"
-
-            />
+            tools:listitem="@layout/view_produk"/>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <ProgressBar
@@ -30,13 +28,5 @@
     android:visibility="invisible"
     />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_produk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_margin="32dp"
-        android:clickable="true"
-        android:src="@drawable/ic_baseline_add_24"/>
+
 </RelativeLayout>

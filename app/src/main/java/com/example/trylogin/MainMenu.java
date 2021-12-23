@@ -63,22 +63,22 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.fashion_act:
-                Toast.makeText(MainMenu.this, "fashion", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainMenu.this, katfs.class));
                 break;
             case R.id.electronic_act:
-                Toast.makeText(MainMenu.this, "electronic", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainMenu.this, katel.class));
                 break;
             case R.id.book_act:
-                Toast.makeText(MainMenu.this, "book", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainMenu.this, katbk.class));
                 break;
             case R.id.sport_act:
-                Toast.makeText(MainMenu.this, "sport", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainMenu.this, katsp.class));
                 break;
             case R.id.traveling_act:
-                Toast.makeText(MainMenu.this, "traveling", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainMenu.this, kattv.class));
                 break;
             case R.id.other_act:
-                Toast.makeText(MainMenu.this, "other", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainMenu.this, katln.class));
                 break;
         }
     }
