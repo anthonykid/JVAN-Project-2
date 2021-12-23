@@ -1,6 +1,7 @@
 
 package com.example.trylogin;
 
+        import androidx.appcompat.app.ActionBar;
         import androidx.appcompat.app.AppCompatActivity;
         import androidx.recyclerview.widget.LinearLayoutManager;
         import androidx.recyclerview.widget.RecyclerView;
@@ -40,6 +41,9 @@ public class katel extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.perkat);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         rfdata = findViewById(R.id.swprf);
         pbdata = findViewById(R.id.pbd);

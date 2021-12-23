@@ -1,5 +1,6 @@
 package com.example.trylogin;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -18,6 +19,9 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         fashion = findViewById(R.id.fashion_act);
         electronic = findViewById(R.id.electronic_act);

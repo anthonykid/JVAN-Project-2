@@ -1,5 +1,6 @@
 package com.example.trylogin;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -43,6 +44,10 @@ public class StaffMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staff_menu);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
         but_add = findViewById(R.id.add_produk);
         rfdata = findViewById(R.id.swprf);
         pbdata = findViewById(R.id.pbd);
